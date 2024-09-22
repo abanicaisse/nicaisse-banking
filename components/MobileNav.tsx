@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Footer from "./Footer";
 
 const MobileNavbar = ({ user }: MobileNavProps) => {
   const pathname = usePathname();
@@ -34,7 +35,7 @@ const MobileNavbar = ({ user }: MobileNavProps) => {
           >
             <Image src={"/icons/logo.svg"} width={34} height={34} alt="logo" />
             <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">
-              Horizon
+              aBanking
             </h1>
           </Link>
           <div className="mobilenav-sheet">
@@ -78,7 +79,7 @@ const MobileNavbar = ({ user }: MobileNavProps) => {
                 USER
               </nav>
             </SheetClose>
-            FOOTER
+            <Footer user={user} type="mobile" />
           </div>
         </SheetContent>
       </Sheet>
